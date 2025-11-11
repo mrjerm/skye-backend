@@ -11,6 +11,12 @@ app = Flask(__name__)
 CHECKOUT_SUCCESS_URL = os.environ.get("CHECKOUT_SUCCESS_URL", "https://skye-copier.netlify.app/success.html")
 CHECKOUT_CANCEL_URL = os.environ.get("CHECKOUT_CANCEL_URL", "https://skye-copier.netlify.app/cancel.html")
 
+# ===== PING ROUTE (keeps free-tier backend awake) =====
+@app.route("/ping")
+def ping():
+    return "OK", 200
+
+
 @app.route("/create-checkout-session", methods=["POST"])
 def create_checkout_session():
     name = request.form.get("name")
