@@ -1,10 +1,6 @@
 from flask import Flask, request, redirect
 import os
 import stripe
-from dotenv import load_dotenv
-
-# Load environment variables from .env (local development)
-load_dotenv()
 
 # Get Stripe secret key from environment
 stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
