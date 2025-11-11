@@ -8,8 +8,8 @@ stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
 app = Flask(__name__)
 
 # URLs for frontend pages (Netlify)
-CHECKOUT_SUCCESS_URL = os.environ.get("CHECKOUT_SUCCESS_URL", "https://skye-copier.netlify.app/success.html")
-CHECKOUT_CANCEL_URL = os.environ.get("CHECKOUT_CANCEL_URL", "https://skye-copier.netlify.app/cancel.html")
+CHECKOUT_SUCCESS_URL = os.environ.get("CHECKOUT_SUCCESS_URL", "https://skye-trade-copier.netlify.app/success.html")
+CHECKOUT_CANCEL_URL = os.environ.get("CHECKOUT_CANCEL_URL", "https://skye-trade-copier.netlify.app/cancel.html")
 
 # ===== PING ROUTE (keeps free-tier backend awake) =====
 @app.route("/ping")
