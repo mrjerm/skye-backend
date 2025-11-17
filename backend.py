@@ -36,7 +36,7 @@ def create_checkout_session():
                         "name": "Skye Trade Copier Access",
                         "description": "Pre-commit access to Skye Trade Copier. Payment is pre-authorized only until activation threshold is met."
                     },
-                    "unit_amount": 7500,  # $75 in cents
+                    "unit_amount": 15000,  # $75 in cents
                 },
                 "quantity": 1,
             }],
